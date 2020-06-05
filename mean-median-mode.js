@@ -6,6 +6,10 @@
 // Mode: The number that appears the most times
 
 arr1 = [4, 3, 1, 2, 2, 7, 9, 14, 2, 27, 400, 9, 1, 8];
+// Expected Result:
+// Mean:  	34.928571428571
+// Median:	5.5
+// Mode:  	2
 
 function mmm(arr) {
   var n = arr.length;
@@ -29,7 +33,7 @@ function mmm(arr) {
     return a - b;
   });
   if (n % 2 == 0) {
-    median = (arr[n / 2] + arr[n / 2 + 1]) / 2;
+    median = (arr[n / 2 - 1] + arr[n / 2]) / 2;
   } else {
     median = arr[Math.floor(n / 2)];
   }
